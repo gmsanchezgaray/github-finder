@@ -1,6 +1,6 @@
 ## 🔍 GitHub Finder App
 
-> Profile finder application, built with [React](https://es.reactjs.org). A better look at your GitHub profile! Includes profile bio, repositories, status, followers, followers and where you work.
+> Profile finder application, built with [React](https://es.reactjs.org). A better look at your GitHub profile! Includes profile bio, repositories, status, followers, following and where you work.
 
 ## 🚀 Demo
 
