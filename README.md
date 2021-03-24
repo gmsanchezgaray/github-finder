@@ -1,3 +1,5 @@
+[![imagen-2021-03-24-205216.png](https://i.postimg.cc/d0wSqCRX/imagen-2021-03-24-205216.png)](https://postimg.cc/bZVRgsBH)
+
 ## 🔍 GitHub Finder App
 
 > Profile finder application, built with [React](https://es.reactjs.org). A better look at your GitHub profile! Includes profile bio, repositories, status, followers, following and where you work.
