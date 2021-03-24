@@ -7,13 +7,16 @@ const UserItem = (props) => {
     <div className="card text-center" id={props.id}>
       <img
         src={props.avatar}
-        alt=""
+        alt="User avatar"
         className="round-img"
         style={{ width: "60px" }}
       />
-      <h3>{props.login}</h3>
+      <h4 className="text-gray ">{props.login}</h4>
       <div>
-        <Link to={`/user/${props.login}`} className="btn btn-dark btn-sm my-1">
+        <Link
+          to={`/user/${props.login}`}
+          className="btn btn-primary btn-sm my-1"
+        >
           Show profile
         </Link>
       </div>

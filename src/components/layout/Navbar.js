@@ -1,30 +1,31 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
+import Logo from "./logo-navbar.svg";
+import Search from "../users/Search";
 
 export class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar bg-primary">
+      <nav className="navbar bg-gray">
         <h1>
-          <i className="fab fa-github"></i>
-          {this.props.title}
+          <Link to="/">
+            <img className="logo" src={Logo} alt="Logo App" />
+          </Link>
         </h1>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Search />
           </li>
-          <li>
-            <Link to="/about">About</Link>
+          <li className="sub-caption about-info all-center ">
+            <Link to="/about" title="About this App">
+              i
+            </Link>
           </li>
         </ul>
       </nav>
     );
   }
 }
-
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 export default Navbar;

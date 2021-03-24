@@ -13,6 +13,7 @@ import {
   SET_LOADING,
   SET_ALERT,
   REMOVE_ALERT,
+  SET_ONBOARDING,
 } from "../types";
 
 let githubClientId;
@@ -32,6 +33,7 @@ const GithubState = (props) => {
     user: {},
     repos: [],
     loading: false,
+    onboarding: true,
     alert_message: null,
     alert_type: null,
   };
@@ -41,6 +43,7 @@ const GithubState = (props) => {
   //Search Users
   const searchUsers = async (searchText) => {
     setLoading();
+    setOnboarding();
     const res = await axios.get(
       `https://api.github.com/search/users?q=${searchText}&
       client_id=${githubClientId}&
@@ -96,6 +99,9 @@ const GithubState = (props) => {
   //Remove Alert
   const removeAlert = () => dispatch({ type: REMOVE_ALERT });
 
+  //Set Onboarding
+  const setOnboarding = () => dispatch({ type: SET_ONBOARDING });
+
   return (
     <GithubContext.Provider
       value={{
@@ -111,6 +117,8 @@ const GithubState = (props) => {
         clearUsers,
         setAlert,
         removeAlert,
+        onboarding: state.onboarding,
+        setOnboarding,
       }}
     >
       {props.children}

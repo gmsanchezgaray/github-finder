@@ -6,6 +6,7 @@ import GithubContext from "../../context/github/githubContext";
 const Repos = () => {
   const githubContext = useContext(GithubContext);
 
+  console.log(githubContext.repos);
   return githubContext.repos.map((repo) => (
     <RepoItem repo={repo} key={repo.id} />
   ));

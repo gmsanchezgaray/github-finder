@@ -6,7 +6,7 @@ const Alert = () => {
 
   const content = githubContext.alert_message ? (
     <div className={`alert alert-${githubContext.alert_type}`}>
-      <i className="fas fa-info-circle" />
+      <i className="fas fa-info-circle mx" />
       {githubContext.alert_message}
     </div>
   ) : null;

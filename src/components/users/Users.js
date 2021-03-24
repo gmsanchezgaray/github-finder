@@ -13,13 +13,7 @@ const Users = () => {
       {githubContext.loading ? (
         <Spinner />
       ) : (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gridGap: "1rem",
-          }}
-        >
+        <div className="grid-3">
           {users_list.map((user, key) => {
             return (
               <UserItem

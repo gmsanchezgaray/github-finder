@@ -6,6 +6,7 @@ import {
   SET_LOADING,
   SET_ALERT,
   REMOVE_ALERT,
+  SET_ONBOARDING,
 } from "../types";
 
 export default (state, action) => {
@@ -21,6 +22,11 @@ export default (state, action) => {
         ...state,
         loading: true,
       };
+    case SET_ONBOARDING:
+      return {
+        ...state,
+        onboarding: false,
+      };
     case GET_USER:
       return {
         ...state,
@@ -32,6 +38,7 @@ export default (state, action) => {
         ...state,
         users: [],
         loading: false,
+        onboarding: true,
       };
     case GET_REPOS:
       return {
